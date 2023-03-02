@@ -1,0 +1,11 @@
+{
+  "files": ["**/*.css", "**/*.scss"],
+  "fix": true,
+  "emitErrors": true,
+  "failOnError": true,
+  "rules": {
+    "max-line-length": [2, {
+      "lineLength": 80
+    }]
+  }
+}

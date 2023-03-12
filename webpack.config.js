@@ -1,7 +1,5 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
-const PrettierPlugin = require('prettier-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
@@ -13,7 +11,6 @@ module.exports = {
       extensions: ['tsx', 'ts', 'jsx', 'js'],
       failOnError: true,
     }),
-    new PrettierPlugin(),
     new StylelintPlugin(),
   ],
   module: {
@@ -24,6 +21,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
+            loader: 'prettier-loader',
+            options: {
+              parser: 'babel',
+            },
             presets: ['@babel/preset-env', '@babel/preset-react'],
           },
         },

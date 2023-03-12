@@ -4,8 +4,11 @@
   "emitErrors": true,
   "failOnError": true,
   "rules": {
-    "max-line-length": [2, {
-      "lineLength": 80
-    }]
+    "max-line-length": [
+      2,
+      {
+        "lineLength": 80
+      }
+    ]
   }
 }

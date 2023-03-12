@@ -29,6 +29,9 @@
       "git add"
     ]
   },
+  "browser": {
+    "./src": "./src"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint-staged",
@@ -47,6 +50,7 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.0",
+    "@storybook/react": "^6.5.16",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
@@ -66,7 +70,6 @@
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.3",
     "prettier": "^2.8.4",
-    "prettier-webpack-plugin": "^1.2.0",
     "style-loader": "^3.3.1",
     "stylelint": "^15.2.0",
     "stylelint-webpack-plugin": "^4.1.0",

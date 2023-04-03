@@ -2,10 +2,23 @@
   "compilerOptions": {
     "target": "ES2017",
     "module": "CommonJS",
-    "jsx": "react-jsx",
+    "jsx": "react",
+    "strict": true,
     "esModuleInterop": true,
-    "baseUrl": "./src"
+    "baseUrl": "./src/",
+    "paths": {
+      "@/app/*": ["app/*"],
+      "@/entities/*": ["entities/*"],
+      "@/features/*": ["features/*"],
+      "@/pages/*": ["pages/*"],
+      "@/shared/*": ["shared/*"],
+      "@/widgets/*": ["widgets/*"]
+    }
   },
-  "include": ["src"],
-  "exclude": ["./node_modules/**/*"]
+  "include": ["src/**/*", "declaration.d.ts"],
+  "exclude": ["node_modules", "dist"],
+  "resolve": {
+    "extensions": [".ts", ".tsx", ".js", ".jsx", ".json", ".svg"]
+  },
+  "files": ["declaration.d.ts"]
 }

@@ -13,8 +13,7 @@
     "plugin:react/recommended",
     "plugin:prettier/recommended"
   ],
-  "overrides": [
-  ],
+  "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -33,7 +32,7 @@
       }
     }
   },
-  "plugins": ["react", "jsx-a11y", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "jsx-a11y", "@typescript-eslint", "prettier", "simple-import-sort", "import"],
   "rules": {
     "semi": 0,
     "react/jsx-indent": ["error", 2],
@@ -41,14 +40,24 @@
     "no-console": "warn",
     "react/prop-types": [2, { "ignore": ["history"] }],
     "jsx-a11y/label-has-associated-control": "off",
-    "react/jsx-filename-extension": [1,
-      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
-    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "react/no-set-state": "off",
     "prettier/prettier": ["error"],
     "react/jsx-props-no-spreading": "off",
     "prefer-promise-reject-errors": "off",
     "camelcase": "off",
-    "@typescript-eslint/no-var-requires": "off"
+    "@typescript-eslint/no-var-requires": "off",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc"
+        },
+        "newlines-between": "always",
+        "groups": [["builtin", "external"], "internal", "parent", "sibling", "index"]
+      }
+    ]
   }
 }

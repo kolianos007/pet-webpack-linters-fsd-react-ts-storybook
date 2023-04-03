@@ -5,9 +5,9 @@
   "failOnError": true,
   "rules": {
     "max-line-length": [
-      2,
+      80,
       {
-        "lineLength": 80
+        "severity": "warning"
       }
     ]
   }

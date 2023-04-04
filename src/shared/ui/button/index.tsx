@@ -4,13 +4,27 @@ import React, { FC } from 'react';
 
 import { ButtonProps } from '@/shared/ui/button/Button.types';
 
-const Button: FC<ButtonProps> = ({ children, color, big, ...props }) => {
-  const rootClasses = ['my-button'];
+const Button: FC<ButtonProps> = ({
+  children,
+  color,
+  variant = 'contained',
+  size,
+  margin,
+  background,
+  padding,
+  ...props
+}) => {
+  const rootClasses = ['my-btn'];
 
-  if (big) rootClasses.push('big-btn');
+  if (variant) rootClasses.push(`btn-${variant}`);
+  if (size) rootClasses.push(`btn-${size}`);
 
   return (
-    <button {...props} className={rootClasses.join(' ')} style={{ color }}>
+    <button
+      {...props}
+      className={rootClasses.join(' ')}
+      style={{ color, margin, background, padding, borderColor: color }}
+    >
       {children}
     </button>
   );

@@ -1,7 +1,11 @@
 import { ReactNode } from 'react';
 
 export interface ButtonProps {
-  color: string;
   children: ReactNode;
-  big?: boolean;
+  color?: string;
+  variant?: 'contained' | 'outlined';
+  size?: 'small' | 'medium' | 'big';
+  background?: string;
+  margin?: string | number;
+  padding?: string | number;
 }

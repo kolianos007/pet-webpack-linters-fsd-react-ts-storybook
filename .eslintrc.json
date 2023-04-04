@@ -46,6 +46,7 @@
     "react/jsx-props-no-spreading": "off",
     "prefer-promise-reject-errors": "off",
     "camelcase": "off",
+    "react/no-unescaped-entities": "off",
     "@typescript-eslint/no-var-requires": "off",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",

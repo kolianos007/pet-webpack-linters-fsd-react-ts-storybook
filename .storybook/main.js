@@ -7,7 +7,12 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-interactions'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-actions',
+    '@storybook/addon-interactions',
+  ],
   framework: '@storybook/react',
   core: {
     builder: {
@@ -26,9 +31,9 @@ module.exports = {
     }
     config.resolve.plugins.push(new TsconfigPathsPlugin({}));
     const mergedConfig = merge(config, {
-      resolve: {
-        extensions: ['.tsx', '.ts', '.js', '.jsx'],
-      },
+      // resolve: {
+      //   extensions: ['.tsx', '.ts', '.js', '.jsx'],
+      // },
       module: {
         rules: [
           {

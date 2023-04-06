@@ -1,7 +1,7 @@
-import Header from '@/widgets/header/index';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import Button from '../../shared/ui/button';
 import React from 'react';
+
+import Header from '@/widgets/header/index';
 
 export default {
   title: 'Example/Header',

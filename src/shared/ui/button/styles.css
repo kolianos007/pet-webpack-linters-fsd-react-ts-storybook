@@ -18,6 +18,7 @@
   color: black;
   border: 1px solid black;
 }
+
 /*variant*/
 
 /*size*/
@@ -41,4 +42,22 @@
   font-size: 30px;
   max-height: 80px;
 }
+
 /*size*/
+
+/*styled buttons*/
+.btn-submit {
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.btn-submit:hover {
+  backgroundcolor: #218838;
+}
+
+/*styled buttons*/

@@ -44,9 +44,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@hookform/resolvers": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^6.5.16"
+    "react-hook-form": "^7.43.9",
+    "storybook": "^6.5.16",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",

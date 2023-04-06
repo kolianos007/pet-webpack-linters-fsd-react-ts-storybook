@@ -3,7 +3,7 @@ import './styles.css';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
-import Home from '@/pages/home/index';
+import { Home } from '@/pages/index';
 
 export default {
   title: 'Example/Pages',
@@ -21,3 +21,7 @@ export default {
 const Template: ComponentStory<typeof Home> = (args) => <Home {...args} />;
 
 export const HomePage = Template.bind({});
+
+HomePage.args = {
+  withHeader: true,
+};

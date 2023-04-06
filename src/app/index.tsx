@@ -2,15 +2,12 @@ import './style.css';
 
 import React from 'react';
 
-import Q from '@/app/colors.svg';
-import w from '@/app/qwe.jpg';
+import Home from '@/pages/home';
 
 const App = () => {
   return (
     <div className={'bg'}>
-      {/*<Q />*/}
-      <img src={Q} />
-      <img src={w} alt="" />
+      <Home />
     </div>
   );
 };

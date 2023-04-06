@@ -2,7 +2,7 @@ import './styles.css';
 
 import React, { FC } from 'react';
 
-import { Button } from '@/shared/ui';
+import Button from '@/shared/ui/button';
 import { HeaderProps } from '@/widgets/header/Header.types';
 
 const Header: FC<HeaderProps> = ({ variant = 'static', logo, ...props }) => {

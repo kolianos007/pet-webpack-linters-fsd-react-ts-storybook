@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  padding: 0 !important;
 }
 
 .header {
@@ -10,6 +9,14 @@ body {
   justify-content: space-between;
   align-items: center;
   background: white;
+}
+
+.header-sticky {
+  position: sticky;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .logo {

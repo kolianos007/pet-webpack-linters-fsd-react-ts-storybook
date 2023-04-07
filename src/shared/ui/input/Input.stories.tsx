@@ -25,9 +25,9 @@ export default {
 
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
-export const SInput = Template.bind({});
+export const DefaultInput = Template.bind({});
 
-SInput.args = {
+DefaultInput.args = {
   label: 'Label',
   error: 'The field is required',
 };

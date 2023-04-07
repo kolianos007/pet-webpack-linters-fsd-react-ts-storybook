@@ -4,7 +4,6 @@ const { resolve } = require('path');
 const { merge } = require('webpack-merge');
 const custom = require('../webpack.config');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
@@ -12,12 +11,12 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-actions',
     '@storybook/addon-interactions',
+    '@storybook/addon-mdx-gfm',
   ],
-  framework: '@storybook/react',
-  core: {
-    builder: {
-      name: 'webpack5',
-      options: {
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {
+      builder: {
         lazyCompilation: true,
       },
     },
@@ -31,9 +30,6 @@ module.exports = {
     }
     config.resolve.plugins.push(new TsconfigPathsPlugin({}));
     const mergedConfig = merge(config, {
-      // resolve: {
-      //   extensions: ['.tsx', '.ts', '.js', '.jsx'],
-      // },
       module: {
         rules: [
           {
@@ -73,5 +69,8 @@ module.exports = {
       ],
     });
     return mergedConfig;
+  },
+  docs: {
+    autodocs: true,
   },
 };

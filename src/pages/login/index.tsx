@@ -9,6 +9,7 @@ import { AuthSchema } from '@/shared/schemas/index';
 import Button from '@/shared/ui/button';
 import Form from '@/shared/ui/form';
 import Input from '@/shared/ui/input';
+import CenteredBlock from '@/shared/ui/centeredBlock';
 
 const Login: FC = () => {
   const {
@@ -25,19 +26,21 @@ const Login: FC = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit)} className="loginForm">
-      <Input name="login" label="Login:" register={register('username')} error={errors.username?.message} />
-      <Input
-        name="password"
-        label="Password:"
-        type="password"
-        register={register('password')}
-        error={errors.password?.message}
-      />
-      <Button type="submit" className="btn-submit">
-        Login
-      </Button>
-    </Form>
+    <CenteredBlock>
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        <Input name="login" label="Login:" register={register('username')} error={errors.username?.message} />
+        <Input
+          name="password"
+          label="Password:"
+          type="password"
+          register={register('password')}
+          error={errors.password?.message}
+        />
+        <Button type="submit" className="btn-submit">
+          Login
+        </Button>
+      </Form>
+    </CenteredBlock>
   );
 };
 

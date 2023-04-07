@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import { RegistrationFormValues } from '@/pages/registration/Registration.types';
 import { AuthSchema } from '@/shared/schemas';
 import Button from '@/shared/ui/button';
+import CenteredBlock from '@/shared/ui/centeredBlock';
 import Form from '@/shared/ui/form';
 import Input from '@/shared/ui/input';
 
@@ -25,19 +26,21 @@ const Registration: FC = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit)} className="registrationForm">
-      <Input name="login" label="Login:" register={register('username')} error={errors.username?.message} />
-      <Input
-        name="password"
-        label="Password:"
-        type="password"
-        register={register('password')}
-        error={errors.password?.message}
-      />
-      <Button type="submit" className="btn-submit">
-        Register
-      </Button>
-    </Form>
+    <CenteredBlock>
+      <Form onSubmit={handleSubmit(onSubmit)} className="registrationForm">
+        <Input name="login" label="Login:" register={register('username')} error={errors.username?.message} />
+        <Input
+          name="password"
+          label="Password:"
+          type="password"
+          register={register('password')}
+          error={errors.password?.message}
+        />
+        <Button type="submit" className="btn-submit">
+          Register
+        </Button>
+      </Form>
+    </CenteredBlock>
   );
 };
 

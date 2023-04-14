@@ -1,12 +1,16 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
-import Button from './index';
+import Button from '@/shared/ui/button/';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Example/Button',
   component: Button,
+  parameters: {
+    // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
+    layout: 'centered',
+  },
   argTypes: {
     variant: {
       control: {

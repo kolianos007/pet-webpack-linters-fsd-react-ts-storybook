@@ -1,14 +1,32 @@
-import React, { FC } from 'react';
+import '@/pages/home/styles.css';
+
+import React, { FC, useState } from 'react';
 
 import { HomeProps } from '@/pages/home/Home.types';
 import Logo from '@/shared/assets/logo.png';
+import Button from '@/shared/ui/button';
+import { getRandomNumber } from '@/shared/utils';
 import Header from '@/widgets/header';
 
 const Home: FC<HomeProps> = ({ withHeader = true }) => {
+  const [number1, setNumber1] = useState(getRandomNumber());
+  const [number2, setNumber2] = useState(getRandomNumber());
+
+  const handleButtonClick = () => {
+    setNumber1(getRandomNumber());
+    setNumber2(getRandomNumber());
+  };
+
   return (
     <>
       {withHeader && <Header variant="static" logo={Logo} />}
       <div className="container">
+        <div className="wrapper">
+          <div className="numbers">
+            {number1} + {number2} = {number1 + number2}
+          </div>
+          <Button onClick={handleButtonClick}>Generate new numbers</Button>
+        </div>
         <p>
           What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
           has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of

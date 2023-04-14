@@ -1,18 +1,12 @@
-import './style.css';
+import '@/app/style.css';
 
 import React from 'react';
+import { RouterProvider } from 'react-router-dom';
 
-import Q from '@/app/colors.svg';
-import w from '@/app/qwe.jpg';
+import router from '@/app/routes';
 
 const App = () => {
-  return (
-    <div className={'bg'}>
-      {/*<Q />*/}
-      <img src={Q} />
-      <img src={w} alt="" />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

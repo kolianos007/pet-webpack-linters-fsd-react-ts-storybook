@@ -6,6 +6,8 @@ import { ButtonProps } from '@/shared/ui/button/Button.types';
 
 const Button: FC<ButtonProps> = ({
   children,
+  className = '',
+  onClick,
   color,
   variant = 'contained',
   size,
@@ -16,6 +18,7 @@ const Button: FC<ButtonProps> = ({
 }) => {
   const rootClasses = ['my-btn'];
 
+  if (className) rootClasses.push(className);
   if (variant) rootClasses.push(`btn-${variant}`);
   if (size) rootClasses.push(`btn-${size}`);
 
@@ -24,6 +27,7 @@ const Button: FC<ButtonProps> = ({
       {...props}
       className={rootClasses.join(' ')}
       style={{ color, margin, background, padding, borderColor: color }}
+      onClick={onClick}
     >
       {children}
     </button>

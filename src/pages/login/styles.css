@@ -1,0 +1,8 @@
+.loginForm {
+  width: 300px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}

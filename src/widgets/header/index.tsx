@@ -1,21 +1,24 @@
-import './styles.css';
+import '@/widgets/header/styles.css';
 
 import React, { FC } from 'react';
 
-import { Button } from '@/shared/ui';
+import Logout from '@/shared/ui/logout';
 import { HeaderProps } from '@/widgets/header/Header.types';
 
-const Header: FC<HeaderProps> = ({ variant = 'static', logo, ...props }) => {
+const Header: FC<HeaderProps> = ({ variant = 'static', logo, background, ...props }) => {
+  const loginData = localStorage.getItem('loginData');
+  const userName = loginData ? JSON.parse(loginData).username : null;
   const rootClasses = ['header'];
 
   if (variant) rootClasses.push(`header-${variant}`);
 
   return (
-    <header {...props} className={rootClasses.join(' ')}>
+    <header {...props} className={rootClasses.join(' ')} style={{ background }}>
       <img src={logo} className="logo" />
-      <Button variant="contained" size="medium">
-        Login
-      </Button>
+      <div className="right-block">
+        <span className="username">{userName}</span>
+        <Logout />
+      </div>
     </header>
   );
 };

@@ -22,3 +22,14 @@ body {
 .logo {
   height: 60px;
 }
+
+.username {
+  font-size: 24px;
+  font-family: cursive;
+  text-transform: uppercase;
+}
+
+.right-block {
+  display: flex;
+  align-items: center;
+}

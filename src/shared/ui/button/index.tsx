@@ -1,6 +1,6 @@
 import './styles.css';
 
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 
 import { ButtonProps } from '@/shared/ui/button/Button.types';
 

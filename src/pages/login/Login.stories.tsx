@@ -8,6 +8,9 @@ export default {
   component: Login,
   parameters: {
     layout: 'centered',
+    reactRouter: {
+      routePath: '/login',
+    },
   },
 } as ComponentMeta<typeof Login>;
 

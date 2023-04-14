@@ -12,6 +12,7 @@ module.exports = {
     '@storybook/addon-actions',
     '@storybook/addon-interactions',
     '@storybook/addon-mdx-gfm',
+    'storybook-addon-react-router-v6',
   ],
   framework: {
     name: '@storybook/react-webpack5',

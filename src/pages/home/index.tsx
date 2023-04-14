@@ -1,3 +1,5 @@
+import '@/pages/home/styles.css';
+
 import React, { FC, useState } from 'react';
 
 import { HomeProps } from '@/pages/home/Home.types';

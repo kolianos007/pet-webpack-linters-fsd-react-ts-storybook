@@ -1,15 +1,12 @@
-import './style.css';
+import '@/app/style.css';
 
 import React from 'react';
+import { RouterProvider } from 'react-router-dom';
 
-import Home from '@/pages/home';
+import router from '@/app/routes';
 
 const App = () => {
-  return (
-    <div className={'bg'}>
-      <Home />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

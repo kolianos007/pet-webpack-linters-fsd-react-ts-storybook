@@ -13,7 +13,7 @@ const Logout: FC = () => {
   };
 
   return (
-    <Button variant="outlined" className="btn-icon" onClick={logoutHandler}>
+    <Button variant="outlined" className="btn-icon" onClick={logoutHandler} data-testid={'logout'}>
       <BiLogOut />
     </Button>
   );

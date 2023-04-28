@@ -5,7 +5,7 @@ import React, { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
-import { RegistrationFormValues } from '@/pages/registration/Registration.types';
+import { RegistrationFormValues } from '@/pages/registration/index.types';
 import { AuthSchema } from '@/shared/schemas';
 import Button from '@/shared/ui/button';
 import CenteredBlock from '@/shared/ui/centeredBlock';
@@ -27,7 +27,6 @@ const Registration: FC = () => {
     localStorage.setItem('registrationData', JSON.stringify(data));
     localStorage.setItem('loginData', JSON.stringify(data));
     navigate('/');
-    // console.log('Registration data:', data);
   };
 
   return (

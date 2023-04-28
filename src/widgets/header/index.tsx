@@ -3,7 +3,7 @@ import '@/widgets/header/styles.css';
 import React, { FC } from 'react';
 
 import Logout from '@/shared/ui/logout';
-import { HeaderProps } from '@/widgets/header/Header.types';
+import { HeaderProps } from '@/widgets/header/index.types';
 
 const Header: FC<HeaderProps> = ({ variant = 'static', logo, background, ...props }) => {
   const loginData = localStorage.getItem('loginData');

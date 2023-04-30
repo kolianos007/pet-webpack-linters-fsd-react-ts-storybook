@@ -2,7 +2,7 @@ import '@/pages/home/styles.css';
 
 import React, { FC, useState } from 'react';
 
-import { HomeProps } from '@/pages/home/Home.types';
+import { HomeProps } from '@/pages/home/index.types';
 import Logo from '@/shared/assets/logo.png';
 import Button from '@/shared/ui/button';
 import { getRandomNumber } from '@/shared/utils';
@@ -19,10 +19,10 @@ const Home: FC<HomeProps> = ({ withHeader = true }) => {
 
   return (
     <>
-      {withHeader && <Header variant="static" logo={Logo} />}
-      <div className="container">
+      {withHeader && <Header variant="static" logo={Logo} data-testid="header" />}
+      <div className="container" data-testid="homepage">
         <div className="wrapper">
-          <div className="numbers">
+          <div className="numbers" data-testid={'numbers'}>
             {number1} + {number2} = {number1 + number2}
           </div>
           <Button onClick={handleButtonClick}>Generate new numbers</Button>

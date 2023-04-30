@@ -2,7 +2,7 @@ import './styles.css';
 
 import React, { FC } from 'react';
 
-import { ButtonProps } from '@/shared/ui/button/Button.types';
+import { ButtonProps } from '@/shared/ui/button/index.types';
 
 const Button: FC<ButtonProps> = ({
   children,

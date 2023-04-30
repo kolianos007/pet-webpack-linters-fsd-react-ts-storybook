@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
 import ProtectedRoute from '@/app/routes/ProtectedRoute';
+import UnauthenticatedRoute from '@/app/routes/UnauthenticatedRoute';
 import { Home, Login, Registration } from '@/pages/index';
 
 const router = createBrowserRouter([
@@ -15,12 +16,17 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: '/login',
-    element: <Login />,
-  },
-  {
-    path: '/registration',
-    element: <Registration />,
+    element: <UnauthenticatedRoute />,
+    children: [
+      {
+        path: '/login',
+        element: <Login />,
+      },
+      {
+        path: '/registration',
+        element: <Registration />,
+      },
+    ],
   },
 ]);
 

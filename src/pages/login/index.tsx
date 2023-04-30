@@ -5,7 +5,7 @@ import React, { FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
-import { LoginFormValues } from '@/pages/login/Login.types';
+import { LoginFormValues } from '@/pages/login/index.types';
 import { AuthSchema } from '@/shared/schemas/index';
 import Button from '@/shared/ui/button';
 import CenteredBlock from '@/shared/ui/centeredBlock';
@@ -18,7 +18,6 @@ const Login: FC = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<LoginFormValues>({
     resolver: yupResolver(AuthSchema),
@@ -39,11 +38,8 @@ const Login: FC = () => {
     console.log('Login data:', data);
   };
 
-  // eslint-disable-next-line no-console
-  console.log(watch('username'));
-
   return (
-    <CenteredBlock>
+    <CenteredBlock data-testid="login">
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Input label="Login:" {...register('username')} error={errors.username?.message} />
         <Input label="Password:" type="password" {...register('password')} error={errors.password?.message} />

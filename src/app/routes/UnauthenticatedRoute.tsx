@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 
-const ProtectedRoute = () => {
+const UnauthenticatedRoute = () => {
   const [isAuth, setIsAuth] = useState(() => {
     const value = localStorage.getItem('loginData');
     return value ? JSON.parse(value) : null;
@@ -21,7 +21,7 @@ const ProtectedRoute = () => {
     };
   }, []);
 
-  return isAuth ? <Outlet /> : <Navigate to="/login" />;
+  return !isAuth ? <Outlet /> : <Navigate to="/" />;
 };
 
-export default ProtectedRoute;
+export default UnauthenticatedRoute;

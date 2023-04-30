@@ -24,7 +24,6 @@ describe('Router testing', () => {
         <Login />
       </MemoryRouter>,
     );
-    screen.debug();
     expect(screen.getByTestId('login')).toBeInTheDocument();
   });
 

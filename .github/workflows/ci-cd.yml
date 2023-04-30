@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Set up environment variables
         run: |
-          echo "APP_URL=${{ secrets.APP_URL }}" >> $GITHUB_ENV
+          echo "APP_URL=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}@${{ github.ref }}" >> $GITHUB_ENV
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2

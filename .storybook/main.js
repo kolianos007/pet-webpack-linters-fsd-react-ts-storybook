@@ -4,6 +4,9 @@ const { resolve } = require('path');
 const { merge } = require('webpack-merge');
 const custom = require('../webpack.config');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+
+const envPath = process.env.NODE_ENV === 'production' ? './.env.production' : './.env.development';
+
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
@@ -30,6 +33,7 @@ module.exports = {
       config.resolve.plugins = [];
     }
     config.resolve.plugins.push(new TsconfigPathsPlugin({}));
+    config.plugins.push(new Dotenv({ path: envPath }));
     const mergedConfig = merge(config, {
       module: {
         rules: [

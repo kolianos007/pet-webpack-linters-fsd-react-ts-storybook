@@ -25,7 +25,9 @@ const Home: FC<HomeProps> = ({ withHeader = true }) => {
           <div className="numbers" data-testid={'numbers'}>
             {number1} + {number2} = {number1 + number2}
           </div>
-          <Button onClick={handleButtonClick}>Generate new numbers</Button>
+          <Button onClick={handleButtonClick} data-testid="generateNewNumber">
+            Generate new numbers
+          </Button>
         </div>
         <p>
           What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum

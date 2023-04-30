@@ -1,3 +1,4 @@
+const Dotenv = require('dotenv-webpack');
 const path = require('path');
 const { merge } = require('webpack-merge');
 
@@ -10,4 +11,5 @@ module.exports = merge(webpackConfig, {
     filename: 'bundle.[hash].js',
     clean: true,
   },
+  plugins: [new Dotenv({ path: './.env.production' })],
 });

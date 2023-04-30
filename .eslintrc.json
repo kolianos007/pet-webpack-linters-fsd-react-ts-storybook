@@ -2,10 +2,14 @@
   "env": {
     "browser": true,
     "node": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true,
+    "mocha": true
   },
   "globals": {
-    "require": true
+    "require": true,
+    "$": "readonly",
+    "browser": "readonly"
   },
   "extends": [
     "eslint:recommended",
@@ -38,9 +42,19 @@
     "react/jsx-indent": ["error", 2],
     "max-len": [2, 120, 2],
     "no-console": "warn",
-    "react/prop-types": [2, { "ignore": ["history"] }],
+    "react/prop-types": [
+      2,
+      {
+        "ignore": ["history"]
+      }
+    ],
     "jsx-a11y/label-has-associated-control": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
     "react/no-set-state": "off",
     "prettier/prettier": ["error"],
     "react/jsx-props-no-spreading": "off",

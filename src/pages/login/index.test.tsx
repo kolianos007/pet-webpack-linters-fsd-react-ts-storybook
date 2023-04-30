@@ -1,10 +1,10 @@
 import { userEvent } from '@storybook/testing-library';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import React from 'react';
-import { BrowserRouter, createMemoryRouter, MemoryRouter, Route, Routes } from 'react-router-dom';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
 
-import { Home, Login, Registration } from '../index';
 import { localStorageMockForTest } from '../../shared/utils';
+import { Home, Login, Registration } from '../index';
 
 describe('Login Page render', () => {
   test('Displays an error message for invalid credentials', async () => {

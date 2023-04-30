@@ -43,7 +43,7 @@ const Login: FC = () => {
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Input label="Login:" {...register('username')} error={errors.username?.message} />
         <Input label="Password:" type="password" {...register('password')} error={errors.password?.message} />
-        <Button type="submit" className="btn-submit">
+        <Button type="submit" className="btn-submit" id="submitBtn">
           Login
         </Button>
         {errorLogin && <span className="error">{errorLogin}</span>}

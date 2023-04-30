@@ -34,7 +34,7 @@ export const Btn = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Btn.args = {
   color: 'black',
-  children: 'Example Button',
+  children: 'Screenshot test button',
   variant: 'contained',
   size: 'medium',
   margin: '10px',

@@ -4,6 +4,7 @@ const { resolve } = require('path');
 const { merge } = require('webpack-merge');
 const custom = require('../webpack.config');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const envPath = process.env.NODE_ENV === 'production' ? './.env.production' : './.env.development';
 
